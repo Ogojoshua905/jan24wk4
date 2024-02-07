@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        main{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(5, 200px);
+            grid-template-areas: 
+            "a1 a1 a1 a1"
+            "b2 b3 d7 c6"
+            "c4 c4 e8 c6"
+            "c4 c4 e8 c6"
+            "c5 c5 c5 c5";
+        }
+
+        div:nth-of-type(1){
+            grid-area: a1;
+            background-color: red;
+        }
+        div:nth-of-type(2){
+            grid-area: b2;
+            background-color: yellow;
+        }
+        div:nth-of-type(3){
+            grid-area: b3;
+            background-color: blue;
+        }
+        div:nth-of-type(4){
+            grid-area: c4;
+            background-color: brown;
+        }
+        div:nth-of-type(5)
+        {
+            grid-area: c5;
+            background-color: tomato;
+        }
+        div:nth-of-type(6)
+        {
+            grid-area: c6;
+            background-color: cyan;
+        }
+        div:nth-of-type(7)
+        {
+            grid-area: d7;
+            background-color: fuchsia;
+        }
+        div:nth-of-type(8)
+        {
+            grid-area: e8;
+            background-color: black;
+        }
+
+
+        /* div:nth-of-type(1){
+            grid-area: a;
+        }
+        div:nth-of-type(2){
+            grid-area: b;
+        }
+        div:nth-of-type(3){
+            grid-area: c;
+        }
+        div:nth-of-type(4){
+            grid-area: d;
+        }
+        div:nth-of-type(5)
+        {
+            grid-area: e;
+        } */
+
+        div{
+            border: 5px solid;
+        }
+
+        ul{
+            list-style-type: none;
+            background-color: tomato;
+            height: 200px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 40px;
+            align-items: center;
+        }
+
+        ul>li:nth-of-type(2n){
+            align-self: flex-start;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="">link1</a></li>
+            <li><a href="">link2</a></li>
+            <li><a href="">link3</a></li>
+            <li><a href="">link4</a></li>
+            <li><a href="">link5</a></li>
+            <li><a href="">link6</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </main>
+</body>
+</html>
